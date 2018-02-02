@@ -44,9 +44,12 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
-  # Gems nedan är för produktionsmiljö.
-  gem 'pg', '~> 0.21'
-  gem 'rails_12factor'
+end
+
+group :production do
+    # Gems nedan är för produktionsmiljö.
+    gem 'pg', '~> 0.21'
+    gem 'rails_12factor'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
