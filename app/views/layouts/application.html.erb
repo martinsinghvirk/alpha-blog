@@ -9,6 +9,13 @@
   </head>
 
   <body>
+    <!-- Visar meddelandet när artiklar lyckas skapas -->
+    <% flash.each do |name, msg| %>
+      <ul>
+        <li><%= msg %></li>
+      </ul>
+    <% end %>
+    
     <%= yield %>
   </body>
 </html>
