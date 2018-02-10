@@ -1,0 +1,8 @@
+<!-- Används för återanvändning (partials) -->
+
+<!-- Visar meddelandet när artiklar lyckas skapas -->
+<% flash.each do |name, msg| %>
+    <ul>
+        <li><%= msg %></li>
+    </ul>
+<% end %>

@@ -1,0 +1,31 @@
+<!-- Används för återanvändning (partials) i create och edit av en artikel -->
+
+<!-- Visar felmeddelande -->
+<% if @article.errors.any? %>
+    <h2>The following errors prevented the article from getting created</h2>
+    <ul>
+        <% @article.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+    </ul>
+<% end %>
+
+<!-- Formulär -->
+<%= form_for @article do |f| %>
+    <!-- Paragraf för titel -->
+    <p>
+        <strong><%= f.label :title %></strong></br>
+        <%= f.text_field :title %>
+    </p>
+    <!-- Paragraf för textinnehåll -->
+    <p>
+        <strong><%= f.label :description %></strong></br>
+        <%= f.text_area :description%>
+    </p>
+    <!-- Paragraf för knappar -->
+    <p>
+        <%= f.submit %>
+    </p>
+<% end %>
+
+<%= link_to "Back to articles listning", articles_path %>
