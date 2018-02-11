@@ -9,9 +9,14 @@
   </head>
 
   <body>
+    <%= render 'layouts/navigation' %>
     <!-- Hämtning/visning av messages -->
     <%= render 'layouts/messages' %>
 
-    <%= yield %>
+    <!-- Lägger alla sidor i en kontainer -->
+    <div class="container">
+      <%= yield %>
+    </div>
+    <%= render 'layouts/footer' %>
   </body>
 </html>

@@ -1,2 +1,70 @@
+// Sätter bakgrundsfärg på navigeringsbar.
+$navbar-default-bg: #000000;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+// Sätter style på logotypen
+#logo{
+    float: left;
+    color: #ffffff;
+    font-size: 1.7em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+#logo:hover{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.jumbotron{
+    background-image: asset-url('jumbotron_bg.jpeg');
+    background-size: cover;
+    height: 500px;
+}
+
+.jumbotron h1{
+    color: #000000;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
+}
+
+.center{
+    text-align: center;
+}
+
+.btn-large{
+    background-color: black;
+    font-size: 1.7em;
+}
+
+footer{
+    margin-top: 50px;
+    padding-top: 5px;
+    border-top: 1px solid #eaeaea;
+    color: #777777;
+}
+
+footer a:hover{
+    color: #222222;
+}
+
+footer small{
+    float: left;
+}
+
+footer ul{
+    float: right;
+    list-style: none;
+}
+
+footer ul li {
+    float: left;
+    margin-left: 15px;
+}
+
+
