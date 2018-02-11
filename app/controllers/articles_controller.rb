@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-    # Enbart angiva metoder kommer köra den privata metoder set_article.
+    # Private metoden set_article exekveras innan de definierade metoderna i listan.
     before_action :set_article, only: [:edit, :update, :show, :destory]
 
     def index
@@ -38,8 +38,7 @@ class ArticlesController < ApplicationController
     def show        
     end
 
-    def destroy       
-        @article.destroy
+    def destroy
         flash[:notice] = "Article was successfully deleted"
         redirect_to articles_path
     end
