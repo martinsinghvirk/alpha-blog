@@ -1,14 +1,7 @@
 <!-- Används för återanvändning (partials) i create och edit av en artikel -->
 
 <!-- Visar felmeddelande -->
-<% if @article.errors.any? %>
-    <h2>The following errors prevented the article from getting created</h2>
-    <ul>
-        <% @article.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-        <% end %>
-    </ul>
-<% end %>
+<%= render 'shared/errors', obj: @article %>
 
 <!-- Formulär -->
 <div class="row">
