@@ -43,6 +43,18 @@ $navbar-default-bg: #000000;
     font-size: 1.7em;
 }
 
+// Listing article
+.article-title{
+    font-weight: bold;
+    font-size: 1.7em;
+}
+
+.article-body{
+    border-top: 1px solid #eaeaea;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 // Show article
 .article-actions{
     border-top: 1px solid #eaeaea;
