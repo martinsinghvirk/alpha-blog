@@ -21,5 +21,8 @@
     </div>
     <!-- Footer som visas på varje sida -->
     <%= render 'layouts/footer' %>
+
+    <!-- Visar debugging i vyn -->
+    <%= debug(params) if Rails.env.development? %>
   </body>
 </html>
