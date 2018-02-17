@@ -19,6 +19,7 @@ $navbar-default-bg: #000000;
     text-decoration: none;
 }
 
+// Style på jumbotronen
 .jumbotron{
     background-image: asset-url('jumbotron_bg.jpeg');
     background-size: cover;
@@ -42,6 +43,7 @@ $navbar-default-bg: #000000;
     font-size: 1.7em;
 }
 
+// Style på footern
 footer{
     margin-top: 50px;
     padding-top: 5px;

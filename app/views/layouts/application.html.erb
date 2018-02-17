@@ -8,15 +8,18 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <!-- Det som läggs till i body visas på samtliga sidor i views -->
   <body>
+    <!-- Navigeringsbar, som visas på varje sida -->
     <%= render 'layouts/navigation' %>
-    <!-- Hämtning/visning av messages -->
+    <!-- Hämtning/visning av flash-meddelanden -->
     <%= render 'layouts/messages' %>
 
     <!-- Lägger alla sidor i en kontainer -->
     <div class="container">
       <%= yield %>
     </div>
+    <!-- Footer som visas på varje sida -->
     <%= render 'layouts/footer' %>
   </body>
 </html>
