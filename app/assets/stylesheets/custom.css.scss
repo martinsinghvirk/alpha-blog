@@ -43,6 +43,16 @@ $navbar-default-bg: #000000;
     font-size: 1.7em;
 }
 
+// Show article
+.article-actions{
+    border-top: 1px solid #eaeaea;
+    padding-top: 5px;
+}
+
+.description{
+    margin-top: 0;
+}
+
 // Style på footern
 footer{
     margin-top: 50px;
