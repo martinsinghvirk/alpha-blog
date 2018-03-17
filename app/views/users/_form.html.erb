@@ -1,3 +1,5 @@
+<!-- Används för återanvändning (partials) i create och edit av en user -->
+
 <!-- Visar felmeddelande -->
 <%= render 'shared/errors', obj: @user %>
 
@@ -38,7 +40,7 @@
             <!-- Button -->
             <div class="form-group">
                 <div class="col-sm-10 col-sm-offset-2">
-                    <!-- Kollar om den körs create (om user är en ny db-rad) eller edit och ändrar knapptexten därefter -->
+                    <!-- Kollar om funktionen create (om user är en ny db-rad) eller edit körs och ändrar knapptexten därefter -->
                     <%= f.submit(@user.new_record? ? "Sign up" : "Update account", class: "btn btn-primary btn-lg") %>
                 </div>
             </div><!-- /.form-group -->
