@@ -1,6 +1,10 @@
 class ArticlesController < ApplicationController
-    # Private metoden set_article exekveras innan de definierade metoderna i listan.
+    # Private metoden set_article exekveras innan de definierade funktioner nedan.
     before_action :set_article, only: [:edit, :update, :show, :destroy]
+    # Kräver en inloggade user förutom nedan definierade funktioner.
+    before_action :require_user, except: [:index, :show]
+    # Kräver en specifik user som publiserat artikeln för att ändra och ta bort.
+    before_action :require_same_user, only: [:edit, :update, :destroy]
 
     def index
         # Delar upp sidan baserat på antalet artiklar som satts till 5 stycken.
@@ -55,4 +59,13 @@ class ArticlesController < ApplicationController
         def article_params
             params.require(:article).permit(:title, :description)
         end
+
+        def require_same_user
+            if current_user != @article.user
+                flash[:danger] = "You can only edit or delete your own articles"
+                redirect_to root_path
+            end
+        end
+
+
 end
