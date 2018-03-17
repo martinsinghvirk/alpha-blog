@@ -3,7 +3,9 @@ class ArticlesController < ApplicationController
     before_action :set_article, only: [:edit, :update, :show, :destroy]
 
     def index
-        @articles = Article.all
+        # Delar upp sidan baserat på antalet artiklar som satts till 5 stycken.
+        @articles = Article.paginate(page: params[:page], per_page: 5)
+        # @articles = Article.all # Tidigare anrop till modellen.
     end
 
     def new
