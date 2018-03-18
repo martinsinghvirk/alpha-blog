@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-    has_many :articles
+    has_many :articles, dependent: :destroy
 
     # Gör den angiva e-mailen till små bokstäver innan den lagras i db. 
     before_save { self.email = email.downcase }
