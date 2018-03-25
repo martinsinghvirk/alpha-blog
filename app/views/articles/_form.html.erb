@@ -29,13 +29,14 @@
 
             <!-- Categories -->
             <div class="form-group">
-                <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2">
-                        <!-- Visar alla tillgängliga kategorier som checkboxar -->
-                        <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
-                            <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %>
-                        <% end %>
-                    </div>
+                <div class="control-label col-sm-2">
+                    <%= f.label :Category %>
+                </div>
+                <div class="col-sm-8">
+                    <!-- Visar alla tillgängliga kategorier som checkboxar -->
+                    <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
+                        <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox-inline") + cb.text} %>
+                    <% end %>
                 </div>
             </div><!-- /.form-group -->
 
